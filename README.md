@@ -1,13 +1,32 @@
 # La risposta è nella domanda?
 
-Esperimento dietro l'articolo di paithon: quando un LLM risponde giusto a un
-quiz a risposta multipla, da dove arriva la risposta? Dalla domanda, dai pesi
-del modello o dal calcolo? Progetto e piano in `docs/superpowers/`.
+Codice, domande e risposte dell'esperimento dietro l'articolo di paithon.it
+[«La risposta è nella domanda?»](https://paithon.it/la-risposta-e-nella-domanda/):
+quando un modello linguistico risponde giusto a un quiz a risposta multipla
+che non ha mai visto, da dove arriva la risposta? Dalla domanda, dai pesi del
+modello o dal calcolo?
+
+Una scala di rispondenti sulle stesse domande: il caso; un solutore che pesa
+le parole (PMI su Wikipedia in italiano); Qwen2.5-0.5B con i pesi a caso e
+addestrato; Qwen3.8 27B quantizzato a 4 bit, su una GPU; Claude Sonnet 5.5
+senza strumenti né memoria; per le domande deduttive, un calcolatore che fa il
+conto. Domande: 200 nuove in italiano, 50 coppie trappola, 100 inconoscibili,
+100 deduttive, più 400 di ARC.
+
+*English summary: code, questions and all model answers for paithon.it's
+article on whether the answer to a multiple-choice question is "in the
+question". A word co-occurrence solver, Qwen models from 0.5B (with random and
+trained weights) to 27B, Claude Sonnet 5.5 and a symbolic calculator answer the
+same fresh Italian questions; see `risultati/sintesi.md`.*
+
+## Come citare
+
+paithon.it (2026). *La risposta è nella domanda?* Esperimento e dati.
+https://github.com/paithon-it/risposta-nella-domanda
 
 ## Test
 
 ```bash
-cd esperimenti/risposta-nella-domanda
 python3 -m unittest discover -s tests -v
 ```
 
@@ -150,5 +169,8 @@ di mezzo.
 
 ## Licenze
 
-Codice sotto licenza MIT. Dati (domande, risposte, conteggi) sotto CC BY-SA
-4.0, la licenza di ARC e di Wikipedia da cui derivano.
+- Codice (`rnd/`, `tests/`, `gpu/`): licenza MIT, vedi `LICENSE`.
+- Dati (domande, risposte, conteggi in `domande/`, `sorgente/`, `risultati/`):
+  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.it), la
+  licenza di ARC e di Wikipedia da cui derivano in parte.
+- Il testo dell'articolo, su paithon.it: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
