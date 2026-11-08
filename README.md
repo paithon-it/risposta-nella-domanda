@@ -33,7 +33,7 @@ python3 -m unittest discover -s tests -v
 I test di unità non usano la rete; quelli che scaricano modelli partono solo
 con `RND_INTEGRAZIONE=1`.
 
-## Il modello locale
+## Il modello piccolo (Qwen2.5 0,5B)
 
 `Qwen/Qwen2.5-0.5B-Instruct` in bfloat16 su CPU (4 core): circa 10 s per
 caricarlo, 2,8 s a domanda (scelta vincolata più 8 token di testo libero),
@@ -41,6 +41,26 @@ caricarlo, 2,8 s a domanda (scelta vincolata più 8 token di testo libero),
 configurazione, `torch.manual_seed(20261107)`) va a 1,4 s a domanda e scrive
 testo senza senso: per questo la risposta dei modelli locali è la scelta
 vincolata fra le lettere, non il testo (misurato l'8/11/2026).
+
+## Il modello grande (Qwen3.8 27B)
+
+Il gradino fra Qwen 0,5B e Claude è **Qwen3.8 27B**, l'8/11/2026 su una GPU
+NVIDIA L4 da 24 GB. I pesi originali (`Qwen/Qwen3.8-27B`, 56 GB in bf16, 31 in
+FP8) non ci stanno: si usa la quantizzazione a 4 bit
+`cyankiwi/Qwen3.8-27B-AWQ-INT4` (21 GB, formato compressed-tensors), fatta da
+terzi. La legge compressa vLLM (`ModelloVLLM` in `rnd/locale.py`); transformers
+proverebbe a decomprimerla in bf16.
+
+Risponde come gli altri modelli open: scelta vincolata fra le lettere, con la
+probabilità esatta di ciascuna lettera dopo il prompt (`prompt_logprobs` di
+vLLM), più 8 token di testo libero. Il ragionamento che Qwen3.8 ha acceso di
+serie è spento (`enable_thinking=False`). Caricamento in circa 100 s, poi meno
+di un secondo a domanda: 1800 risposte in 26 minuti. Passi e script in `gpu/`.
+
+Risultati principali (`risultati/sintesi.md`): 95,5% sulle domande fresche,
+40,5% con le sole opzioni, 79% sulle deduttive (100% sui sillogismi, 75% sulle
+moltiplicazioni, 50% sul cifrario con spostamento 3 e 10% con spostamento 2),
+6% di risposte familiari nelle versioni cambiate delle trappole.
 
 ## L'oracolo (Claude via Claude Code)
 
@@ -109,6 +129,7 @@ python3 -m rnd.corsa --rispondente calcolatore --famiglie deduttive --varianti i
 python3 -m rnd.corsa --rispondente sonnet --famiglie deduttive --varianti intera,solo_opzioni,ragiona --pausa 5
 python3 -m rnd.corsa --rispondente qwen --famiglie deduttive --varianti intera,solo_opzioni
 python3 -m rnd.corsa --rispondente qwen-casuale --famiglie deduttive --varianti intera,solo_opzioni
+# il modello grande, sulla GPU: gpu/README.md (gpu/prepara.sh, poi gpu/corsa.sh)
 python3 -m rnd.statistiche             # risultati/sintesi.json e sintesi.md
 ```
 
