@@ -1,0 +1,3 @@
+{"id": "e1", "testo": "Di che colore è il cielo sereno di giorno?", "giusta": "azzurro", "sbagliate": ["verde", "rosso", "marrone"]}
+{"id": "e2", "testo": "Qual è la capitale del Portogallo?", "giusta": "Lisbona", "sbagliate": ["Porto", "Madrid", "Coimbra"]}
+{"id": "e3", "testo": "Quante dita ha una mano umana?", "giusta": "cinque", "sbagliate": ["quattro", "sei", "dieci"]}

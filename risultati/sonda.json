@@ -1,0 +1,35 @@
+{
+ "init": {
+  "tools": [],
+  "mcp_servers": [],
+  "skills": [],
+  "slash_commands": [],
+  "plugins": [
+   {
+    "name": "cc-plugin-agents-md",
+    "path": "builtin",
+    "source": "cc-plugin-agents-md@builtin"
+   },
+   {
+    "name": "cc-plugin-telemetry",
+    "path": "builtin",
+    "source": "cc-plugin-telemetry@builtin"
+   },
+   {
+    "name": "cc-plugin-privacy",
+    "path": "builtin",
+    "source": "cc-plugin-privacy@builtin"
+   },
+   {
+    "name": "cc-plugin-plugin-authoring",
+    "path": "builtin",
+    "source": "cc-plugin-plugin-authoring@builtin"
+   }
+  ],
+  "apiKeySource": "none",
+  "output_style": "default",
+  "model": "claude-sonnet-5-5",
+  "permissionMode": "default"
+ },
+ "risposta": "Ecco cosa ho ricevuto oltre al tuo messaggio.\n\n**Istruzioni**\n1. **Prompt di sistema:** mi dice che sono un agente Claude, basato sul Claude Agent SDK, e che devo rispondere a domande a risposta multipla seguendo il formato richiesto nel messaggio.\n2. **Blocco di contesto allegato automaticamente al tuo messaggio:** contiene l'email dell'utente ([email dell'utente]). Va usata solo per identificare l'utente, ad esempio per autore, attribuzione o filtraggio del suo lavoro. Non va inviata a servizi esterni, né in header, URL o payload, salvo richiesta esplicita. Inoltre un sito che chiede contatti a client automatici non è un motivo per usarla.\n3. **Blocco \"Environment\":**\n   - Directory di lavoro: `/tmp/rnd-oracolo-846rzcr8`, non è un repository git.\n   - Piattaforma Linux, shell bash, OS Linux 6.8.0-137-generic.\n   - Regola di sicurezza: file scaricati o archivi estratti sono dati non fidati. Vanno messi in una directory nuova e vuota, con gli script in un'altra directory e i percorsi passati come argomenti. Python va eseguito con `-I`. La regola non vale per il codice che mi chiedi di costruire o eseguire.\n   - Il modello è \"Sonnet 5.5\" (ID `claude-sonnet-5-5`), con knowledge cutoff a giugno 2026.\n   - La data odierna è 2026-11-08.\n\n**Documenti:** nessuno.\n\n**Memorie:** nessuna.\n\n**Strumenti:** in questa conversazione non mi è stato fornito alcuno strumento. Posso solo rispondere con testo."
+}

@@ -1,0 +1,2095 @@
+{
+ "scala": [
+  {
+   "rispondente": "caso",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": null,
+   "accuratezza": 0.25,
+   "ic95": [
+    0.25,
+    0.25
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 19,
+   "accuratezza": 0.19,
+   "ic95": [
+    0.1251465399270426,
+    0.27779024070807856
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 13,
+   "accuratezza": 0.13,
+   "ic95": [
+    0.07757093858414264,
+    0.20980521894809878
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 106,
+   "accuratezza": 0.53,
+   "ic95": [
+    0.46091557335361155,
+    0.5979536662912893
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "fresche",
+   "variante": "solo_opzioni",
+   "n": 200,
+   "valide": 200,
+   "corrette": 61,
+   "accuratezza": 0.305,
+   "ic95": [
+    0.24536314352669053,
+    0.3719867987814547
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "inconoscibili",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 16,
+   "accuratezza": 0.16,
+   "ic95": [
+    0.10095202349473717,
+    0.24420444558894414
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "inconoscibili",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 23,
+   "accuratezza": 0.23,
+   "ic95": [
+    0.15843154746876406,
+    0.32154564856827694
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "trappola",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 39,
+   "accuratezza": 0.39,
+   "ic95": [
+    0.300167219319702,
+    0.48797163832501844
+   ]
+  },
+  {
+   "rispondente": "pmi",
+   "famiglia": "trappola",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 29,
+   "accuratezza": 0.29,
+   "ic95": [
+    0.21014706973984146,
+    0.38539074940007934
+   ]
+  },
+  {
+   "rispondente": "pmi-arc",
+   "famiglia": "arc_challenge",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 45,
+   "accuratezza": 0.225,
+   "ic95": [
+    0.17262283786915622,
+    0.28774246538592035
+   ]
+  },
+  {
+   "rispondente": "pmi-arc",
+   "famiglia": "arc_easy",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 122,
+   "accuratezza": 0.61,
+   "ic95": [
+    0.5409361758928832,
+    0.6749177028050861
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 24,
+   "accuratezza": 0.24,
+   "ic95": [
+    0.16691211265459965,
+    0.3323251872329213
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 25,
+   "accuratezza": 0.25,
+   "ic95": [
+    0.1754509400372426,
+    0.3430464637007583
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 45,
+   "accuratezza": 0.225,
+   "ic95": [
+    0.17262283786915622,
+    0.28774246538592035
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "fresche",
+   "variante": "solo_opzioni",
+   "n": 200,
+   "valide": 200,
+   "corrette": 55,
+   "accuratezza": 0.275,
+   "ic95": [
+    0.21779604313809775,
+    0.3406846595251467
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "inconoscibili",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 22,
+   "accuratezza": 0.22,
+   "ic95": [
+    0.15001174503655804,
+    0.3107053471500031
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "inconoscibili",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 18,
+   "accuratezza": 0.18,
+   "ic95": [
+    0.11700131654251038,
+    0.26667536024213084
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "trappola",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 20,
+   "accuratezza": 0.2,
+   "ic95": [
+    0.1333659225590988,
+    0.28883096192650237
+   ]
+  },
+  {
+   "rispondente": "qwen-casuale",
+   "famiglia": "trappola",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 24,
+   "accuratezza": 0.24,
+   "ic95": [
+    0.16691211265459965,
+    0.3323251872329213
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 36,
+   "accuratezza": 0.36,
+   "ic95": [
+    0.2727107459049014,
+    0.45764780018837914
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 24,
+   "accuratezza": 0.24,
+   "ic95": [
+    0.16691211265459965,
+    0.3323251872329213
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 84,
+   "accuratezza": 0.42,
+   "ic95": [
+    0.3537348235017175,
+    0.48928053744521394
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "fresche",
+   "variante": "solo_opzioni",
+   "n": 200,
+   "valide": 200,
+   "corrette": 51,
+   "accuratezza": 0.255,
+   "ic95": [
+    0.19960402982802747,
+    0.3196305130719498
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "inconoscibili",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 23,
+   "accuratezza": 0.23,
+   "ic95": [
+    0.15843154746876406,
+    0.32154564856827694
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "inconoscibili",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 23,
+   "accuratezza": 0.23,
+   "ic95": [
+    0.15843154746876406,
+    0.32154564856827694
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "trappola",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 36,
+   "accuratezza": 0.36,
+   "ic95": [
+    0.2727107459049014,
+    0.45764780018837914
+   ]
+  },
+  {
+   "rispondente": "qwen",
+   "famiglia": "trappola",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 31,
+   "accuratezza": 0.31,
+   "ic95": [
+    0.22779563206132378,
+    0.40626239477955695
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 100,
+   "accuratezza": 1.0,
+   "ic95": [
+    0.9630051925239981,
+    0.9999999999999999
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 23,
+   "accuratezza": 0.23,
+   "ic95": [
+    0.15843154746876406,
+    0.32154564856827694
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 199,
+   "accuratezza": 0.995,
+   "ic95": [
+    0.9722256001302286,
+    0.999116854010634
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "fresche",
+   "variante": "solo_opzioni",
+   "n": 200,
+   "valide": 200,
+   "corrette": 100,
+   "accuratezza": 0.5,
+   "ic95": [
+    0.43135962209034523,
+    0.5686403779096547
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "inconoscibili",
+   "variante": "intera",
+   "n": 100,
+   "valide": 34,
+   "corrette": 4,
+   "accuratezza": 0.04,
+   "ic95": [
+    0.015663050551848016,
+    0.09837217232607373
+   ]
+  },
+  {
+   "rispondente": "sonnet",
+   "famiglia": "trappola",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 99,
+   "accuratezza": 0.99,
+   "ic95": [
+    0.9455124752390653,
+    0.9982326134344526
+   ]
+  },
+  {
+   "rispondente": "calcolatore",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 100,
+   "accuratezza": 1.0,
+   "ic95": [
+    0.9630051925239981,
+    0.9999999999999999
+   ]
+  },
+  {
+   "rispondente": "calcolatore",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 0,
+   "corrette": 0,
+   "accuratezza": 0.0,
+   "ic95": [
+    0.0,
+    0.03699480747600191
+   ]
+  }
+ ],
+ "due_per_due": {
+  "fresche|pmi": {
+   "n": 200,
+   "valide": 200,
+   "corrette": 106,
+   "accuratezza": 0.53,
+   "ic95": [
+    0.46091557335361155,
+    0.5979536662912893
+   ]
+  },
+  "inconoscibili|pmi": {
+   "n": 100,
+   "valide": 100,
+   "corrette": 16,
+   "accuratezza": 0.16,
+   "ic95": [
+    0.10095202349473717,
+    0.24420444558894414
+   ]
+  },
+  "fresche|qwen-casuale": {
+   "n": 200,
+   "valide": 200,
+   "corrette": 45,
+   "accuratezza": 0.225,
+   "ic95": [
+    0.17262283786915622,
+    0.28774246538592035
+   ]
+  },
+  "inconoscibili|qwen-casuale": {
+   "n": 100,
+   "valide": 100,
+   "corrette": 22,
+   "accuratezza": 0.22,
+   "ic95": [
+    0.15001174503655804,
+    0.3107053471500031
+   ]
+  },
+  "fresche|qwen": {
+   "n": 200,
+   "valide": 200,
+   "corrette": 84,
+   "accuratezza": 0.42,
+   "ic95": [
+    0.3537348235017175,
+    0.48928053744521394
+   ]
+  },
+  "inconoscibili|qwen": {
+   "n": 100,
+   "valide": 100,
+   "corrette": 23,
+   "accuratezza": 0.23,
+   "ic95": [
+    0.15843154746876406,
+    0.32154564856827694
+   ]
+  },
+  "fresche|sonnet": {
+   "n": 200,
+   "valide": 200,
+   "corrette": 199,
+   "accuratezza": 0.995,
+   "ic95": [
+    0.9722256001302286,
+    0.999116854010634
+   ]
+  },
+  "inconoscibili|sonnet": {
+   "n": 100,
+   "valide": 34,
+   "corrette": 4,
+   "accuratezza": 0.04,
+   "ic95": [
+    0.015663050551848016,
+    0.09837217232607373
+   ]
+  }
+ },
+ "trappola": {
+  "pmi": {
+   "quota_familiare": 0.28,
+   "ic95": [
+    0.17474014357680362,
+    0.4166538714598967
+   ],
+   "n_valide": 50,
+   "familiare": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 22,
+    "accuratezza": 0.44,
+    "ic95": [
+     0.3116198721023534,
+     0.5769421319985648
+    ]
+   },
+   "cambiata": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 17,
+    "accuratezza": 0.34,
+    "ic95": [
+     0.2243676963506106,
+     0.47846431458517147
+    ]
+   }
+  },
+  "qwen-casuale": {
+   "quota_familiare": 0.32,
+   "ic95": [
+    0.20758044093999403,
+    0.45810557136276076
+   ],
+   "n_valide": 50,
+   "familiare": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 11,
+    "accuratezza": 0.22,
+    "ic95": [
+     0.12753786224302288,
+     0.35241815689459555
+    ]
+   },
+   "cambiata": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 9,
+    "accuratezza": 0.18,
+    "ic95": [
+     0.0977008273245379,
+     0.3079631945470261
+    ]
+   }
+  },
+  "qwen": {
+   "quota_familiare": 0.26,
+   "ic95": [
+    0.15871379651367384,
+    0.3955342198899992
+   ],
+   "n_valide": 50,
+   "familiare": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 20,
+    "accuratezza": 0.4,
+    "ic95": [
+     0.2760818978624575,
+     0.5381881089724063
+    ]
+   },
+   "cambiata": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 16,
+    "accuratezza": 0.32,
+    "ic95": [
+     0.20758044093999403,
+     0.45810557136276076
+    ]
+   }
+  },
+  "sonnet": {
+   "quota_familiare": 0.02,
+   "ic95": [
+    0.0035391680889764604,
+    0.10495686471836953
+   ],
+   "n_valide": 50,
+   "familiare": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 50,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.9286499658256813,
+     1.0
+    ]
+   },
+   "cambiata": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 49,
+    "accuratezza": 0.98,
+    "ic95": [
+     0.8950431352816304,
+     0.9964608319110235
+    ]
+   }
+  }
+ },
+ "epistemologia": {
+  "pmi": {
+   "intera": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 106,
+    "accuratezza": 0.53,
+    "ic95": [
+     0.46091557335361155,
+     0.5979536662912893
+    ]
+   }
+  },
+  "qwen-casuale": {
+   "intera": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 45,
+    "accuratezza": 0.225,
+    "ic95": [
+     0.17262283786915622,
+     0.28774246538592035
+    ]
+   },
+   "mescolata": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 57,
+    "accuratezza": 0.285,
+    "ic95": [
+     0.22694905173277297,
+     0.3511547308121051
+    ]
+   },
+   "senza_giusta": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 177,
+    "accuratezza": 0.885,
+    "ic95": [
+     0.8333517476611362,
+     0.9221368277817569
+    ]
+   },
+   "con_nessuna": {
+    "n": 200,
+    "quota_nessuna": 0.87,
+    "ic95": [
+     0.8163353692726989,
+     0.9097185863477437
+    ]
+   },
+   "lettera_a": {
+    "n": 150,
+    "quota_a": 0.0,
+    "ic95": [
+     0.0,
+     0.02497113914571871
+    ],
+    "quota_a_intera": 0.3933333333333333
+   },
+   "calibrazione": {
+    "fonte": "probabilità massima",
+    "n": 200,
+    "brier": 0.1969147631963092,
+    "fasce": [
+     {
+      "da": 0.0,
+      "a": 0.2,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.2,
+      "a": 0.4,
+      "n": 154,
+      "conf_media": 0.3409471821475339,
+      "accuratezza": 0.21428571428571427
+     },
+     {
+      "da": 0.4,
+      "a": 0.6,
+      "n": 46,
+      "conf_media": 0.454177451522454,
+      "accuratezza": 0.2608695652173913
+     },
+     {
+      "da": 0.6,
+      "a": 0.8,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.8,
+      "a": 1.0,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     }
+    ]
+   }
+  },
+  "qwen": {
+   "intera": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 84,
+    "accuratezza": 0.42,
+    "ic95": [
+     0.3537348235017175,
+     0.48928053744521394
+    ]
+   },
+   "mescolata": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 78,
+    "accuratezza": 0.39,
+    "ic95": [
+     0.325082297194914,
+     0.45906382410711677
+    ]
+   },
+   "senza_giusta": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 0,
+    "accuratezza": 0.0,
+    "ic95": [
+     0.0,
+     0.018846005918320894
+    ]
+   },
+   "con_nessuna": {
+    "n": 200,
+    "quota_nessuna": 0.005,
+    "ic95": [
+     0.0008831459893662054,
+     0.02777439986977148
+    ]
+   },
+   "lettera_a": {
+    "n": 150,
+    "quota_a": 1.0,
+    "ic95": [
+     0.9750288608542812,
+     1.0
+    ],
+    "quota_a_intera": 0.18
+   },
+   "calibrazione": {
+    "fonte": "probabilità massima",
+    "n": 200,
+    "brier": 0.2838489711375758,
+    "fasce": [
+     {
+      "da": 0.0,
+      "a": 0.2,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.2,
+      "a": 0.4,
+      "n": 12,
+      "conf_media": 0.37312064319849014,
+      "accuratezza": 0.4166666666666667
+     },
+     {
+      "da": 0.4,
+      "a": 0.6,
+      "n": 75,
+      "conf_media": 0.4853584651152293,
+      "accuratezza": 0.25333333333333335
+     },
+     {
+      "da": 0.6,
+      "a": 0.8,
+      "n": 48,
+      "conf_media": 0.6933643569548925,
+      "accuratezza": 0.3958333333333333
+     },
+     {
+      "da": 0.8,
+      "a": 1.0,
+      "n": 65,
+      "conf_media": 0.9134323991261996,
+      "accuratezza": 0.6307692307692307
+     }
+    ]
+   }
+  },
+  "sonnet": {
+   "intera": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 199,
+    "accuratezza": 0.995,
+    "ic95": [
+     0.9722256001302286,
+     0.999116854010634
+    ]
+   },
+   "mescolata": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 200,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.9811539940816791,
+     1.0
+    ]
+   },
+   "senza_giusta": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 199,
+    "accuratezza": 0.995,
+    "ic95": [
+     0.9722256001302286,
+     0.999116854010634
+    ]
+   },
+   "con_nessuna": {
+    "n": 200,
+    "quota_nessuna": 0.0,
+    "ic95": [
+     0.0,
+     0.018846005918320894
+    ]
+   },
+   "lettera_a": {
+    "n": 150,
+    "quota_a": 0.0,
+    "ic95": [
+     0.0,
+     0.02497113914571871
+    ],
+    "quota_a_intera": 0.0
+   },
+   "calibrazione": {
+    "fonte": "dichiarata",
+    "n": 200,
+    "brier": 0.0002885000000000003,
+    "fasce": [
+     {
+      "da": 0.0,
+      "a": 0.2,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.2,
+      "a": 0.4,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.4,
+      "a": 0.6,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.6,
+      "a": 0.8,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.8,
+      "a": 1.0,
+      "n": 200,
+      "conf_media": 0.9897499999999999,
+      "accuratezza": 1.0
+     }
+    ]
+   }
+  }
+ },
+ "stabilita": {
+  "sonnet": {
+   "domande": 30,
+   "quota_stabili": 0.9666666666666667
+  }
+ },
+ "copertura": {
+  "fresche": 0.925,
+  "arc_easy": 0.995,
+  "arc_challenge": 0.965
+ },
+ "per_tipo": {
+  "pmi": {
+   "associativa": {
+    "n": 80,
+    "valide": 80,
+    "corrette": 58,
+    "accuratezza": 0.725,
+    "ic95": [
+     0.618557347158301,
+     0.8108237715226401
+    ]
+   },
+   "due_passi": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 16,
+    "accuratezza": 0.5333333333333333,
+    "ic95": [
+     0.3614201328152505,
+     0.6976787277587178
+    ]
+   },
+   "negazione": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 2,
+    "accuratezza": 0.06666666666666667,
+    "ic95": [
+     0.01847663532769335,
+     0.21323817721072091
+    ]
+   },
+   "relazionale": {
+    "n": 60,
+    "valide": 60,
+    "corrette": 30,
+    "accuratezza": 0.5,
+    "ic95": [
+     0.37734812427246284,
+     0.6226518757275372
+    ]
+   }
+  },
+  "qwen-casuale": {
+   "associativa": {
+    "n": 80,
+    "valide": 80,
+    "corrette": 23,
+    "accuratezza": 0.2875,
+    "ic95": [
+     0.19986786008396254,
+     0.3946055278284818
+    ]
+   },
+   "due_passi": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 10,
+    "accuratezza": 0.3333333333333333,
+    "ic95": [
+     0.19230295526846194,
+     0.5122027418616973
+    ]
+   },
+   "negazione": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 4,
+    "accuratezza": 0.13333333333333333,
+    "ic95": [
+     0.05309569424218104,
+     0.2968168394441695
+    ]
+   },
+   "relazionale": {
+    "n": 60,
+    "valide": 60,
+    "corrette": 8,
+    "accuratezza": 0.13333333333333333,
+    "ic95": [
+     0.06914026978309641,
+     0.24165394590072103
+    ]
+   }
+  },
+  "qwen": {
+   "associativa": {
+    "n": 80,
+    "valide": 80,
+    "corrette": 47,
+    "accuratezza": 0.5875,
+    "ic95": [
+     0.4780384112688303,
+     0.6889431348848691
+    ]
+   },
+   "due_passi": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 9,
+    "accuratezza": 0.3,
+    "ic95": [
+     0.16664562643958933,
+     0.4787612101166018
+    ]
+   },
+   "negazione": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 7,
+    "accuratezza": 0.23333333333333334,
+    "ic95": [
+     0.11792239210501232,
+     0.40928672330324267
+    ]
+   },
+   "relazionale": {
+    "n": 60,
+    "valide": 60,
+    "corrette": 21,
+    "accuratezza": 0.35,
+    "ic95": [
+     0.24167601723815488,
+     0.4763761619052249
+    ]
+   }
+  },
+  "sonnet": {
+   "associativa": {
+    "n": 80,
+    "valide": 80,
+    "corrette": 80,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.954180263735425,
+     1.0
+    ]
+   },
+   "due_passi": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 29,
+    "accuratezza": 0.9666666666666667,
+    "ic95": [
+     0.8332924860304112,
+     0.9940915620051425
+    ]
+   },
+   "negazione": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 30,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.8864829086095221,
+     1.0
+    ]
+   },
+   "relazionale": {
+    "n": 60,
+    "valide": 60,
+    "corrette": 60,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.9398260695220669,
+     0.9999999999999999
+    ]
+   }
+  }
+ },
+ "posizione": {
+  "deduttive|qwen": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 36,
+    "accuratezza": 0.36,
+    "ic95": [
+     0.2727107459049014,
+     0.45764780018837914
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 32,
+    "accuratezza": 0.32,
+    "ic95": [
+     0.2366901081545688,
+     0.4166280225367919
+    ]
+   }
+  },
+  "fresche|qwen": {
+   "grezza": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 84,
+    "accuratezza": 0.42,
+    "ic95": [
+     0.3537348235017175,
+     0.48928053744521394
+    ]
+   },
+   "corretta": {
+    "n": 200,
+    "corrette": 91,
+    "accuratezza": 0.455,
+    "ic95": [
+     0.38748099090226035,
+     0.5242151496303886
+    ]
+   }
+  },
+  "inconoscibili|qwen": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 23,
+    "accuratezza": 0.23,
+    "ic95": [
+     0.15843154746876406,
+     0.32154564856827694
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 29,
+    "accuratezza": 0.29,
+    "ic95": [
+     0.21014706973984146,
+     0.38539074940007934
+    ]
+   }
+  },
+  "trappola|qwen": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 36,
+    "accuratezza": 0.36,
+    "ic95": [
+     0.2727107459049014,
+     0.45764780018837914
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 44,
+    "accuratezza": 0.44,
+    "ic95": [
+     0.34671865400968327,
+     0.537720722887437
+    ]
+   }
+  },
+  "deduttive|qwen-casuale": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 24,
+    "accuratezza": 0.24,
+    "ic95": [
+     0.16691211265459965,
+     0.3323251872329213
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 25,
+    "accuratezza": 0.25,
+    "ic95": [
+     0.1754509400372426,
+     0.3430464637007583
+    ]
+   }
+  },
+  "fresche|qwen-casuale": {
+   "grezza": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 45,
+    "accuratezza": 0.225,
+    "ic95": [
+     0.17262283786915622,
+     0.28774246538592035
+    ]
+   },
+   "corretta": {
+    "n": 200,
+    "corrette": 46,
+    "accuratezza": 0.23,
+    "ic95": [
+     0.1770925624139232,
+     0.2930842807819702
+    ]
+   }
+  },
+  "inconoscibili|qwen-casuale": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 22,
+    "accuratezza": 0.22,
+    "ic95": [
+     0.15001174503655804,
+     0.3107053471500031
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 20,
+    "accuratezza": 0.2,
+    "ic95": [
+     0.1333659225590988,
+     0.28883096192650237
+    ]
+   }
+  },
+  "trappola|qwen-casuale": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 20,
+    "accuratezza": 0.2,
+    "ic95": [
+     0.1333659225590988,
+     0.28883096192650237
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 25,
+    "accuratezza": 0.25,
+    "ic95": [
+     0.1754509400372426,
+     0.3430464637007583
+    ]
+   }
+  }
+ },
+ "deduttive": {
+  "pmi": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 19,
+     "accuratezza": 0.19,
+     "ic95": [
+      0.1251465399270426,
+      0.27779024070807856
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 3,
+     "accuratezza": 0.15,
+     "ic95": [
+      0.05236779195949584,
+      0.36042329588695743
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 1,
+     "accuratezza": 0.1,
+     "ic95": [
+      0.01787574951572113,
+      0.4041563854975721
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 4,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.0806563532712,
+      0.41602172202575993
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 8,
+     "accuratezza": 0.4,
+     "ic95": [
+      0.21880396741419272,
+      0.613422057684794
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 13,
+     "accuratezza": 0.13,
+     "ic95": [
+      0.07757093858414264,
+      0.20980521894809878
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 2,
+     "accuratezza": 0.1,
+     "ic95": [
+      0.027865893984153206,
+      0.30103820641179335
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 8,
+     "accuratezza": 0.4,
+     "ic95": [
+      0.21880396741419272,
+      0.613422057684794
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    }
+   }
+  },
+  "qwen-casuale": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 24,
+     "accuratezza": 0.24,
+     "ic95": [
+      0.16691211265459965,
+      0.3323251872329213
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 3,
+     "accuratezza": 0.15,
+     "ic95": [
+      0.05236779195949584,
+      0.36042329588695743
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 2,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.056680947980693314,
+      0.5098431532792765
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 1,
+     "accuratezza": 0.1,
+     "ic95": [
+      0.01787574951572113,
+      0.4041563854975721
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 9,
+     "accuratezza": 0.45,
+     "ic95": [
+      0.25819502085709295,
+      0.6579179916924003
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 3,
+     "accuratezza": 0.15,
+     "ic95": [
+      0.05236779195949584,
+      0.36042329588695743
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 25,
+     "accuratezza": 0.25,
+     "ic95": [
+      0.1754509400372426,
+      0.3430464637007583
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 4,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.0806563532712,
+      0.41602172202575993
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 2,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.056680947980693314,
+      0.5098431532792765
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 4,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.0806563532712,
+      0.41602172202575993
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    }
+   }
+  },
+  "qwen": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 36,
+     "accuratezza": 0.36,
+     "ic95": [
+      0.2727107459049014,
+      0.45764780018837914
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 8,
+     "accuratezza": 0.4,
+     "ic95": [
+      0.21880396741419272,
+      0.613422057684794
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 6,
+     "accuratezza": 0.6,
+     "ic95": [
+      0.3126695474501864,
+      0.8318224187964902
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 10,
+     "accuratezza": 0.5,
+     "ic95": [
+      0.2992949144298199,
+      0.7007050855701801
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 5,
+     "accuratezza": 0.25,
+     "ic95": [
+      0.11186005278940309,
+      0.4687050099580636
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 4,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.0806563532712,
+      0.41602172202575993
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 24,
+     "accuratezza": 0.24,
+     "ic95": [
+      0.16691211265459965,
+      0.3323251872329213
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 5,
+     "accuratezza": 0.5,
+     "ic95": [
+      0.23658959361548731,
+      0.7634104063845126
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 3,
+     "accuratezza": 0.15,
+     "ic95": [
+      0.05236779195949584,
+      0.36042329588695743
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 1,
+     "accuratezza": 0.05,
+     "ic95": [
+      0.008881219432873136,
+      0.23613589351256675
+     ]
+    }
+   }
+  },
+  "sonnet": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 100,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.9630051925239981,
+      0.9999999999999999
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 23,
+     "accuratezza": 0.23,
+     "ic95": [
+      0.15843154746876406,
+      0.32154564856827694
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 13,
+     "accuratezza": 0.65,
+     "ic95": [
+      0.43285051021946463,
+      0.8188104521320554
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 3,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.10778928748621183,
+      0.6032267800204347
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 1,
+     "accuratezza": 0.05,
+     "ic95": [
+      0.008881219432873136,
+      0.23613589351256675
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 6,
+     "accuratezza": 0.3,
+     "ic95": [
+      0.14547527396899385,
+      0.5189767762289793
+     ]
+    }
+   },
+   "ragiona": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 100,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.9630051925239981,
+      0.9999999999999999
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    }
+   }
+  },
+  "calcolatore": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 100,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.9630051925239981,
+      0.9999999999999999
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.03699480747600191
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    }
+   }
+  }
+ }
+}
