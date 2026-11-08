@@ -9,7 +9,7 @@ from pathlib import Path
 
 from rnd.corsa import CARTELLA, Esito, carica_esiti
 
-ORDINE = ("pmi", "pmi-arc", "qwen-casuale", "qwen", "haiku", "sonnet")
+ORDINE = ("pmi", "pmi-arc", "calcolatore", "qwen-casuale", "qwen", "qwen3.8-27b", "haiku", "sonnet", "opus")
 
 
 def wilson(k: int, n: int, z: float = 1.96) -> tuple[float, float]:

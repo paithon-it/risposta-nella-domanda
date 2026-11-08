@@ -26,7 +26,16 @@ from rnd.varianti import VARIANTI, applica, prompt
 
 CARTELLA = Path(__file__).resolve().parent.parent
 VARIANTI_BASE = ("intera", "solo_opzioni")
-RISPONDENTI = ("pmi", "pmi-arc", "calcolatore", "qwen", "qwen-casuale", "sonnet", "haiku")
+MODELLI_LOCALI = {  # rispondente: (modello su Hugging Face, pesi a caso)
+    "qwen": ("Qwen/Qwen2.5-0.5B-Instruct", False),
+    "qwen-casuale": ("Qwen/Qwen2.5-0.5B-Instruct", True),
+}
+MODELLI_VLLM = {
+    # 27B quantizzato a 4 bit da terzi: i pesi originali (56 GB in bf16, 31 in FP8) non stanno su una L4 da 24 GB,
+    # e il formato (compressed-tensors) lo legge compresso solo vLLM
+    "qwen3.8-27b": "cyankiwi/Qwen3.8-27B-AWQ-INT4",
+}
+RISPONDENTI = ("pmi", "pmi-arc", "calcolatore", *MODELLI_LOCALI, *MODELLI_VLLM, "sonnet", "haiku", "opus")
 
 
 @dataclass
@@ -185,12 +194,16 @@ def crea_rispondente(nome: str) -> Callable:
         from rnd.calcolatore import risolvi
 
         return lambda d, variante, testo: risolvi(d)
-    if nome in ("qwen", "qwen-casuale"):
-        from rnd.locale import ModelloLocale
+    if nome in MODELLI_LOCALI or nome in MODELLI_VLLM:
+        from rnd import locale
 
-        m = ModelloLocale(pesi_casuali=nome == "qwen-casuale")
+        if nome in MODELLI_VLLM:
+            m = locale.ModelloVLLM(MODELLI_VLLM[nome], rispondente=nome)
+        else:
+            hf, casuali = MODELLI_LOCALI[nome]
+            m = locale.ModelloLocale(hf, pesi_casuali=casuali, rispondente=nome)
         return lambda d, variante, testo: m.rispondi(testo, len(d.opzioni))
-    if nome in ("sonnet", "haiku"):
+    if nome in ("sonnet", "haiku", "opus"):
         from rnd.claude_headless import esegui, problemi_sonda, sonda
 
         problemi = problemi_sonda(sonda(nome))

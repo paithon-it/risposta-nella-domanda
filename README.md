@@ -1,31 +1,13 @@
 # La risposta è nella domanda?
 
-Codice, domande e risposte dell'esperimento dietro l'articolo di paithon.it
-[«La risposta è nella domanda?»](https://paithon.it/la-risposta-e-nella-domanda/):
-quando un modello linguistico risponde giusto a un quiz a risposta multipla
-che non ha mai visto, da dove arriva la risposta? Dalla domanda, dai pesi del
-modello o dal calcolo?
-
-Una scala di rispondenti sulle stesse domande: il caso; un solutore che pesa
-le parole (PMI su Wikipedia in italiano); Qwen2.5-0.5B con i pesi a caso e
-addestrato; Claude Sonnet 5.5 senza strumenti né memoria; per le domande
-deduttive, un calcolatore che fa il conto. Domande: 200 nuove in italiano, 50
-coppie trappola, 100 inconoscibili, 100 deduttive, più 400 di ARC.
-
-*English summary: code, questions and all model answers for paithon.it's
-article on whether the answer to a multiple-choice question is "in the
-question". A word co-occurrence solver, a 0.5B model with random and trained
-weights, Claude Sonnet 5.5 and a symbolic calculator answer the same fresh
-Italian questions; see `risultati/sintesi.md`.*
-
-## Come citare
-
-paithon.it (2026). *La risposta è nella domanda?* Esperimento e dati.
-https://github.com/paithon-it/risposta-nella-domanda
+Esperimento dietro l'articolo di paithon: quando un LLM risponde giusto a un
+quiz a risposta multipla, da dove arriva la risposta? Dalla domanda, dai pesi
+del modello o dal calcolo? Progetto e piano in `docs/superpowers/`.
 
 ## Test
 
 ```bash
+cd esperimenti/risposta-nella-domanda
 python3 -m unittest discover -s tests -v
 ```
 
@@ -111,6 +93,9 @@ python3 -m rnd.corsa --rispondente qwen-casuale --famiglie deduttive --varianti 
 python3 -m rnd.statistiche             # risultati/sintesi.json e sintesi.md
 ```
 
+Il modello grande (Qwen3.8 27B) gira su una GPU a ore: passi e script in
+`gpu/README.md`.
+
 Sulle famiglie diverse dalle fresche girano solo `intera` e `solo_opzioni`, più
 `ragiona` sulle deduttive. Se cambiano le regole di lettura della lettera, le
 risposte salvate si rileggono senza nuove chiamate:
@@ -128,6 +113,7 @@ modello locale andava in swap, i tempi sono quindi pessimistici):
 | `qwen` | 1600 | 58 minuti |
 | `qwen-casuale` | 1600 | circa 25 minuti |
 | `sonnet` | 1660 | 3 ore e mezza (5 s di pausa fra le chiamate) |
+| `qwen3.8-27b` | 1800 | 26 minuti su una GPU L4 (vedi `gpu/README.md`) |
 
 Una chiamata di Claude costa circa 700 token in ingresso e 3 in uscita, senza
 ragionamento esteso. I due rami (modelli locali e Claude) sono girati in
@@ -164,8 +150,5 @@ di mezzo.
 
 ## Licenze
 
-- Codice (`rnd/`, `tests/`): licenza MIT, vedi `LICENSE`.
-- Dati (domande, risposte, conteggi in `domande/`, `sorgente/`, `risultati/`):
-  [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.it), la
-  licenza di ARC e di Wikipedia da cui derivano in parte.
-- Il testo dell'articolo, su paithon.it: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it).
+Codice sotto licenza MIT. Dati (domande, risposte, conteggi) sotto CC BY-SA
+4.0, la licenza di ARC e di Wikipedia da cui derivano.

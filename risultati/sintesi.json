@@ -142,6 +142,32 @@
    ]
   },
   {
+   "rispondente": "calcolatore",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 100,
+   "accuratezza": 1.0,
+   "ic95": [
+    0.9630051925239981,
+    0.9999999999999999
+   ]
+  },
+  {
+   "rispondente": "calcolatore",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 0,
+   "corrette": 0,
+   "accuratezza": 0.0,
+   "ic95": [
+    0.0,
+    0.03699480747600191
+   ]
+  },
+  {
    "rispondente": "qwen-casuale",
    "famiglia": "deduttive",
    "variante": "intera",
@@ -350,6 +376,110 @@
    ]
   },
   {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "deduttive",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 79,
+   "accuratezza": 0.79,
+   "ic95": [
+    0.7001985069803768,
+    0.8583445046835422
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "deduttive",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 22,
+   "accuratezza": 0.22,
+   "ic95": [
+    0.15001174503655804,
+    0.3107053471500031
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "fresche",
+   "variante": "intera",
+   "n": 200,
+   "valide": 200,
+   "corrette": 191,
+   "accuratezza": 0.955,
+   "ic95": [
+    0.9167024063390322,
+    0.9761477282752958
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "fresche",
+   "variante": "solo_opzioni",
+   "n": 200,
+   "valide": 200,
+   "corrette": 81,
+   "accuratezza": 0.405,
+   "ic95": [
+    0.3393765611244294,
+    0.4742041800000517
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "inconoscibili",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 24,
+   "accuratezza": 0.24,
+   "ic95": [
+    0.16691211265459965,
+    0.3323251872329213
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "inconoscibili",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 25,
+   "accuratezza": 0.25,
+   "ic95": [
+    0.1754509400372426,
+    0.3430464637007583
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "trappola",
+   "variante": "intera",
+   "n": 100,
+   "valide": 100,
+   "corrette": 94,
+   "accuratezza": 0.94,
+   "ic95": [
+    0.8752303146877748,
+    0.9722142547333433
+   ]
+  },
+  {
+   "rispondente": "qwen3.8-27b",
+   "famiglia": "trappola",
+   "variante": "solo_opzioni",
+   "n": 100,
+   "valide": 100,
+   "corrette": 39,
+   "accuratezza": 0.39,
+   "ic95": [
+    0.300167219319702,
+    0.48797163832501844
+   ]
+  },
+  {
    "rispondente": "sonnet",
    "famiglia": "deduttive",
    "variante": "intera",
@@ -426,32 +556,6 @@
     0.9455124752390653,
     0.9982326134344526
    ]
-  },
-  {
-   "rispondente": "calcolatore",
-   "famiglia": "deduttive",
-   "variante": "intera",
-   "n": 100,
-   "valide": 100,
-   "corrette": 100,
-   "accuratezza": 1.0,
-   "ic95": [
-    0.9630051925239981,
-    0.9999999999999999
-   ]
-  },
-  {
-   "rispondente": "calcolatore",
-   "famiglia": "deduttive",
-   "variante": "solo_opzioni",
-   "n": 100,
-   "valide": 0,
-   "corrette": 0,
-   "accuratezza": 0.0,
-   "ic95": [
-    0.0,
-    0.03699480747600191
-   ]
   }
  ],
  "due_per_due": {
@@ -513,6 +617,26 @@
    "ic95": [
     0.15843154746876406,
     0.32154564856827694
+   ]
+  },
+  "fresche|qwen3.8-27b": {
+   "n": 200,
+   "valide": 200,
+   "corrette": 191,
+   "accuratezza": 0.955,
+   "ic95": [
+    0.9167024063390322,
+    0.9761477282752958
+   ]
+  },
+  "inconoscibili|qwen3.8-27b": {
+   "n": 100,
+   "valide": 100,
+   "corrette": 24,
+   "accuratezza": 0.24,
+   "ic95": [
+    0.16691211265459965,
+    0.3323251872329213
    ]
   },
   "fresche|sonnet": {
@@ -618,6 +742,34 @@
     "ic95": [
      0.20758044093999403,
      0.45810557136276076
+    ]
+   }
+  },
+  "qwen3.8-27b": {
+   "quota_familiare": 0.06,
+   "ic95": [
+    0.020614596364630478,
+    0.16217343370877002
+   ],
+   "n_valide": 50,
+   "familiare": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 48,
+    "accuratezza": 0.96,
+    "ic95": [
+     0.8653966212204534,
+     0.9889613473391734
+    ]
+   },
+   "cambiata": {
+    "n": 50,
+    "valide": 50,
+    "corrette": 46,
+    "accuratezza": 0.92,
+    "ic95": [
+     0.8116149745493629,
+     0.9684509967442093
     ]
    }
   },
@@ -841,6 +993,97 @@
       "n": 65,
       "conf_media": 0.9134323991261996,
       "accuratezza": 0.6307692307692307
+     }
+    ]
+   }
+  },
+  "qwen3.8-27b": {
+   "intera": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 191,
+    "accuratezza": 0.955,
+    "ic95": [
+     0.9167024063390322,
+     0.9761477282752958
+    ]
+   },
+   "mescolata": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 195,
+    "accuratezza": 0.975,
+    "ic95": [
+     0.9428208558483829,
+     0.9892754385292123
+    ]
+   },
+   "senza_giusta": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 162,
+    "accuratezza": 0.81,
+    "ic95": [
+     0.7499864142552062,
+     0.8583290620754351
+    ]
+   },
+   "con_nessuna": {
+    "n": 200,
+    "quota_nessuna": 0.005,
+    "ic95": [
+     0.0008831459893662054,
+     0.02777439986977148
+    ]
+   },
+   "lettera_a": {
+    "n": 150,
+    "quota_a": 0.013333333333333334,
+    "ic95": [
+     0.0036640523882232115,
+     0.047307856380276334
+    ],
+    "quota_a_intera": 0.013333333333333334
+   },
+   "calibrazione": {
+    "fonte": "probabilità massima",
+    "n": 200,
+    "brier": 0.023651675793044707,
+    "fasce": [
+     {
+      "da": 0.0,
+      "a": 0.2,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.2,
+      "a": 0.4,
+      "n": 0,
+      "conf_media": null,
+      "accuratezza": null
+     },
+     {
+      "da": 0.4,
+      "a": 0.6,
+      "n": 5,
+      "conf_media": 0.5478572130203248,
+      "accuratezza": 0.2
+     },
+     {
+      "da": 0.6,
+      "a": 0.8,
+      "n": 3,
+      "conf_media": 0.7069616516431173,
+      "accuratezza": 0.0
+     },
+     {
+      "da": 0.8,
+      "a": 1.0,
+      "n": 192,
+      "conf_media": 0.9947317050149044,
+      "accuratezza": 0.9895833333333334
      }
     ]
    }
@@ -1075,6 +1318,48 @@
     ]
    }
   },
+  "qwen3.8-27b": {
+   "associativa": {
+    "n": 80,
+    "valide": 80,
+    "corrette": 80,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.954180263735425,
+     1.0
+    ]
+   },
+   "due_passi": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 24,
+    "accuratezza": 0.8,
+    "ic95": [
+     0.6269395261897256,
+     0.9049502189759876
+    ]
+   },
+   "negazione": {
+    "n": 30,
+    "valide": 30,
+    "corrette": 30,
+    "accuratezza": 1.0,
+    "ic95": [
+     0.8864829086095221,
+     1.0
+    ]
+   },
+   "relazionale": {
+    "n": 60,
+    "valide": 60,
+    "corrette": 57,
+    "accuratezza": 0.95,
+    "ic95": [
+     0.8629926537490016,
+     0.9828508088208587
+    ]
+   }
+  },
   "sonnet": {
    "associativa": {
     "n": 80,
@@ -1286,6 +1571,90 @@
      0.3430464637007583
     ]
    }
+  },
+  "deduttive|qwen3.8-27b": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 79,
+    "accuratezza": 0.79,
+    "ic95": [
+     0.7001985069803768,
+     0.8583445046835422
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 82,
+    "accuratezza": 0.82,
+    "ic95": [
+     0.7333246397578691,
+     0.8829986834574896
+    ]
+   }
+  },
+  "fresche|qwen3.8-27b": {
+   "grezza": {
+    "n": 200,
+    "valide": 200,
+    "corrette": 191,
+    "accuratezza": 0.955,
+    "ic95": [
+     0.9167024063390322,
+     0.9761477282752958
+    ]
+   },
+   "corretta": {
+    "n": 200,
+    "corrette": 191,
+    "accuratezza": 0.955,
+    "ic95": [
+     0.9167024063390322,
+     0.9761477282752958
+    ]
+   }
+  },
+  "inconoscibili|qwen3.8-27b": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 24,
+    "accuratezza": 0.24,
+    "ic95": [
+     0.16691211265459965,
+     0.3323251872329213
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 27,
+    "accuratezza": 0.27,
+    "ic95": [
+     0.1926946091766482,
+     0.3643230022623127
+    ]
+   }
+  },
+  "trappola|qwen3.8-27b": {
+   "grezza": {
+    "n": 100,
+    "valide": 100,
+    "corrette": 94,
+    "accuratezza": 0.94,
+    "ic95": [
+     0.8752303146877748,
+     0.9722142547333433
+    ]
+   },
+   "corretta": {
+    "n": 100,
+    "corrette": 94,
+    "accuratezza": 0.94,
+    "ic95": [
+     0.8752303146877748,
+     0.9722142547333433
+    ]
+   }
   }
  },
  "deduttive": {
@@ -1426,6 +1795,152 @@
     "sillogismo": {
      "n": 20,
      "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    }
+   }
+  },
+  "calcolatore": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 100,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.9630051925239981,
+      0.9999999999999999
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 10,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.7224598312333834,
+      1.0
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.03699480747600191
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.2775401687666166
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 0,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 0,
      "corrette": 0,
      "accuratezza": 0.0,
      "ic95": [
@@ -1727,6 +2242,152 @@
     }
    }
   },
+  "qwen3.8-27b": {
+   "intera": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 79,
+     "accuratezza": 0.79,
+     "ic95": [
+      0.7001985069803768,
+      0.8583445046835422
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 15,
+     "accuratezza": 0.75,
+     "ic95": [
+      0.5312949900419365,
+      0.888139947210597
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 1,
+     "accuratezza": 0.1,
+     "ic95": [
+      0.01787574951572113,
+      0.4041563854975721
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 5,
+     "accuratezza": 0.5,
+     "ic95": [
+      0.23658959361548731,
+      0.7634104063845126
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 18,
+     "accuratezza": 0.9,
+     "ic95": [
+      0.6989617935882066,
+      0.9721341060158468
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 20,
+     "accuratezza": 1.0,
+     "ic95": [
+      0.8388698745050667,
+      1.0
+     ]
+    }
+   },
+   "solo_opzioni": {
+    "tutte": {
+     "n": 100,
+     "valide": 100,
+     "corrette": 22,
+     "accuratezza": 0.22,
+     "ic95": [
+      0.15001174503655804,
+      0.3107053471500031
+     ]
+    },
+    "aritmetica": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 7,
+     "accuratezza": 0.35,
+     "ic95": [
+      0.18118954786794464,
+      0.5671494897805354
+     ]
+    },
+    "cifrario-2": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 2,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.056680947980693314,
+      0.5098431532792765
+     ]
+    },
+    "cifrario-3": {
+     "n": 10,
+     "valide": 10,
+     "corrette": 2,
+     "accuratezza": 0.2,
+     "ic95": [
+      0.056680947980693314,
+      0.5098431532792765
+     ]
+    },
+    "controintuitivo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 0,
+     "accuratezza": 0.0,
+     "ic95": [
+      0.0,
+      0.16113012549493322
+     ]
+    },
+    "ordinamento": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 8,
+     "accuratezza": 0.4,
+     "ic95": [
+      0.21880396741419272,
+      0.613422057684794
+     ]
+    },
+    "sillogismo": {
+     "n": 20,
+     "valide": 20,
+     "corrette": 3,
+     "accuratezza": 0.15,
+     "ic95": [
+      0.05236779195949584,
+      0.36042329588695743
+     ]
+    }
+   }
+  },
   "sonnet": {
    "intera": {
     "tutte": {
@@ -1941,152 +2602,6 @@
      "ic95": [
       0.8388698745050667,
       1.0
-     ]
-    }
-   }
-  },
-  "calcolatore": {
-   "intera": {
-    "tutte": {
-     "n": 100,
-     "valide": 100,
-     "corrette": 100,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.9630051925239981,
-      0.9999999999999999
-     ]
-    },
-    "aritmetica": {
-     "n": 20,
-     "valide": 20,
-     "corrette": 20,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.8388698745050667,
-      1.0
-     ]
-    },
-    "cifrario-2": {
-     "n": 10,
-     "valide": 10,
-     "corrette": 10,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.7224598312333834,
-      1.0
-     ]
-    },
-    "cifrario-3": {
-     "n": 10,
-     "valide": 10,
-     "corrette": 10,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.7224598312333834,
-      1.0
-     ]
-    },
-    "controintuitivo": {
-     "n": 20,
-     "valide": 20,
-     "corrette": 20,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.8388698745050667,
-      1.0
-     ]
-    },
-    "ordinamento": {
-     "n": 20,
-     "valide": 20,
-     "corrette": 20,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.8388698745050667,
-      1.0
-     ]
-    },
-    "sillogismo": {
-     "n": 20,
-     "valide": 20,
-     "corrette": 20,
-     "accuratezza": 1.0,
-     "ic95": [
-      0.8388698745050667,
-      1.0
-     ]
-    }
-   },
-   "solo_opzioni": {
-    "tutte": {
-     "n": 100,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.03699480747600191
-     ]
-    },
-    "aritmetica": {
-     "n": 20,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.16113012549493322
-     ]
-    },
-    "cifrario-2": {
-     "n": 10,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.2775401687666166
-     ]
-    },
-    "cifrario-3": {
-     "n": 10,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.2775401687666166
-     ]
-    },
-    "controintuitivo": {
-     "n": 20,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.16113012549493322
-     ]
-    },
-    "ordinamento": {
-     "n": 20,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.16113012549493322
-     ]
-    },
-    "sillogismo": {
-     "n": 20,
-     "valide": 0,
-     "corrette": 0,
-     "accuratezza": 0.0,
-     "ic95": [
-      0.0,
-      0.16113012549493322
      ]
     }
    }
