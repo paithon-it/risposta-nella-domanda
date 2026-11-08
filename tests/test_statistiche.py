@@ -3,7 +3,10 @@
 import unittest
 
 from rnd.corsa import Esito
-from rnd.statistiche import affidabilita, brier, riassumi, sintesi_da, wilson
+from dataclasses import replace
+
+from rnd.domanda import Domanda
+from rnd.statistiche import affidabilita, brier, cifre_solutore, riassumi, sintesi_da, wilson
 
 
 def esito(rispondente="finto", famiglia="fresche", variante="intera", id="f001", ripetizione=0,
@@ -63,6 +66,60 @@ class TestSintesi(unittest.TestCase):
         ep = sintesi_da(es, {})["epistemologia"]["finto"]
         self.assertEqual(ep["con_nessuna"]["quota_nessuna"], 0.5)
         self.assertEqual(ep["senza_giusta"]["accuratezza"], 1.0)
+
+
+class TestRegimeDeduttive(unittest.TestCase):
+    def test_divide_secondo_come_ha_risposto_l_oracolo(self):
+        ded = dict(famiglia="deduttive", giusta=1)
+        es = [replace(esito(rispondente="sonnet", id="d1", lettera=1, **ded), testo="B"),
+              replace(esito(rispondente="sonnet", id="d2", lettera=1, **ded), testo="49 × 15 = 735\nB"),
+              replace(esito(rispondente="sonnet", id="d3", lettera=0, **ded), testo="A)"),
+              replace(esito(rispondente="sonnet", id="d4", lettera=1, **ded), testo="B"),
+              esito(rispondente="qwen3.8-27b", id="d1", lettera=1, **ded),
+              esito(rispondente="qwen3.8-27b", id="d2", lettera=0, **ded),
+              esito(rispondente="qwen3.8-27b", id="d3", lettera=1, **ded),
+              esito(rispondente="qwen3.8-27b", id="d4", lettera=0, **ded)]
+        tipi = {"d1": "aritmetica", "d2": "aritmetica", "d3": "sillogismo", "d4": "cifrario-2"}
+        r = sintesi_da(es, {}, tipi)["regime_deduttive"]
+        self.assertEqual(r["sola_lettera"], {"n": 2, "sonnet": 1, "qwen3.8-27b": 2})
+        self.assertEqual(r["sola_lettera_cifrari"], {"n": 1, "sonnet": 1, "qwen3.8-27b": 0})
+        self.assertEqual(r["conto_scritto"], {"n": 1, "sonnet": 1, "qwen3.8-27b": 0})
+
+    def test_senza_entrambi_niente(self):
+        self.assertEqual(sintesi_da([esito()], {})["regime_deduttive"], {})
+
+
+class TestCifreSolutore(unittest.TestCase):
+    def test_conta_le_domande_con_sole_cifre(self):
+        def dom(i, tipo, opzioni):
+            return Domanda(id=i, famiglia="fresche", testo="Quando?", opzioni=opzioni, giusta=0, tipo=tipo)
+        ds = [dom("f1", "due_passi", ("1930", "1920", "1945", "1969")),
+              dom("f2", "associativa", ("Manzoni", "Verga", "Foscolo", "Leopardi")),
+              dom("f3", "associativa", ("1930", "Verga", "Foscolo", "Leopardi"))]  # una parola c'è: non è un sorteggio
+        es = [esito(rispondente="pmi", id="f1", lettera=0, giusta=0),
+              esito(rispondente="pmi", id="f2", lettera=1, giusta=0),
+              esito(rispondente="pmi", id="f3", lettera=0, giusta=0)]
+        self.assertEqual(cifre_solutore(es, ds, frozenset()),
+                         {"numeriche": 1, "giuste_numeriche": 1, "altre": 2, "giuste_altre": 1, "per_tipo": {"due_passi": 1}})
+
+
+class TestSondaToken(unittest.TestCase):
+    def test_prende_solo_le_risposte_a_sola_lettera(self):
+        from rnd.sonda_token import da_provare
+
+        def dom(i, tipo):
+            return Domanda(id=i, famiglia="deduttive", testo="?", opzioni=("a", "b", "c", "d"), giusta=0, tipo=tipo)
+        ds = [dom("d1", "aritmetica"), dom("d2", "aritmetica"), dom("d3", "sillogismo")]
+        ded = dict(famiglia="deduttive", rispondente="sonnet", lettera=0, giusta=0)
+        es = [replace(esito(id="d1", **ded), testo="A"), replace(esito(id="d2", **ded), testo="7 × 3 = 21\nA"),
+              replace(esito(id="d3", **ded), testo="A")]
+        self.assertEqual([d.id for d in da_provare(es, ds)], ["d1", "d3"])
+
+    def test_legge_token_e_ragionamento_dal_flusso(self):
+        from rnd.sonda_token import leggi_flusso
+        flusso = [{"type": "assistant", "message": {"content": [{"type": "thinking", "thinking": ""}, {"type": "text", "text": "C"}]}},
+                  {"type": "result", "result": "C", "usage": {"output_tokens": 72}}]
+        self.assertEqual(leggi_flusso(flusso), {"risposta": "C", "token_in_uscita": 72, "ragionamento": True})
 
 
 class TestCalibrazione(unittest.TestCase):

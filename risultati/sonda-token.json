@@ -1,0 +1,464 @@
+[
+ {
+  "id": "d001",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d002",
+  "tipo": "ordinamento",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d003",
+  "tipo": "sillogismo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d004",
+  "tipo": "aritmetica",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d005",
+  "tipo": "ordinamento",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d007",
+  "tipo": "aritmetica",
+  "risposta": "45 × 24 = 45 × 20 + 45 × 4 = 900 + 180 = 1080\n\n**A**",
+  "token_in_uscita": 40,
+  "ragionamento": false
+ },
+ {
+  "id": "d008",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d011",
+  "tipo": "aritmetica",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d012",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d013",
+  "tipo": "ordinamento",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d014",
+  "tipo": "controintuitivo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d019",
+  "tipo": "cifrario",
+  "risposta": "Decifro spostando ogni lettera indietro di 2: n→l, k→i, d→b, t→r, q→o. Risulta «libro».\n\n**C**",
+  "token_in_uscita": 54,
+  "ragionamento": false
+ },
+ {
+  "id": "d020",
+  "tipo": "sillogismo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d022",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d024",
+  "tipo": "controintuitivo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d025",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d026",
+  "tipo": "cifrario",
+  "risposta": "A",
+  "token_in_uscita": 72,
+  "ragionamento": true
+ },
+ {
+  "id": "d027",
+  "tipo": "ordinamento",
+  "risposta": "Ordine: Tina > Marta > Laura > Sara. La seconda più alta è Marta.\n\nD",
+  "token_in_uscita": 37,
+  "ragionamento": false
+ },
+ {
+  "id": "d028",
+  "tipo": "sillogismo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d029",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d030",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d032",
+  "tipo": "controintuitivo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d033",
+  "tipo": "controintuitivo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d034",
+  "tipo": "controintuitivo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d036",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d037",
+  "tipo": "controintuitivo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d038",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d039",
+  "tipo": "ordinamento",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d040",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d041",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d043",
+  "tipo": "sillogismo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d044",
+  "tipo": "controintuitivo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d045",
+  "tipo": "controintuitivo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d046",
+  "tipo": "sillogismo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d049",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d050",
+  "tipo": "controintuitivo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d052",
+  "tipo": "controintuitivo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d053",
+  "tipo": "cifrario",
+  "risposta": "A",
+  "token_in_uscita": 54,
+  "ragionamento": true
+ },
+ {
+  "id": "d054",
+  "tipo": "ordinamento",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d056",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d058",
+  "tipo": "cifrario",
+  "risposta": "C\n\n\"ecuc\" spostata indietro di 2: e→c, c→a, u→s, c→a = \"casa\".",
+  "token_in_uscita": 40,
+  "ragionamento": false
+ },
+ {
+  "id": "d061",
+  "tipo": "sillogismo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d063",
+  "tipo": "sillogismo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d064",
+  "tipo": "controintuitivo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d065",
+  "tipo": "controintuitivo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d066",
+  "tipo": "sillogismo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d067",
+  "tipo": "sillogismo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d068",
+  "tipo": "sillogismo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d070",
+  "tipo": "sillogismo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d073",
+  "tipo": "sillogismo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d074",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d075",
+  "tipo": "sillogismo",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d076",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d078",
+  "tipo": "aritmetica",
+  "risposta": "25 × 67 = 1675\n\n**D**",
+  "token_in_uscita": 16,
+  "ragionamento": false
+ },
+ {
+  "id": "d079",
+  "tipo": "ordinamento",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d082",
+  "tipo": "aritmetica",
+  "risposta": "96 × 33 = 96 × 30 + 96 × 3 = 2880 + 288 = 3168\n\n**D**",
+  "token_in_uscita": 41,
+  "ragionamento": false
+ },
+ {
+  "id": "d084",
+  "tipo": "cifrario",
+  "risposta": "Decifro con shift di -3: i→f, l→i, x→u, p→m, h→e. Risulta \"fiume\".\n\nB",
+  "token_in_uscita": 44,
+  "ragionamento": false
+ },
+ {
+  "id": "d086",
+  "tipo": "sillogismo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d087",
+  "tipo": "aritmetica",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d090",
+  "tipo": "ordinamento",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d091",
+  "tipo": "sillogismo",
+  "risposta": "D",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d092",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d094",
+  "tipo": "ordinamento",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d096",
+  "tipo": "ordinamento",
+  "risposta": "A",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d097",
+  "tipo": "controintuitivo",
+  "risposta": "B",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ },
+ {
+  "id": "d100",
+  "tipo": "controintuitivo",
+  "risposta": "C",
+  "token_in_uscita": 3,
+  "ragionamento": false
+ }
+]

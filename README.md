@@ -74,6 +74,13 @@ aver ricevuto solo il system prompt, l'ambiente (cartella, data, modello) e
 l'email dell'utente che Claude Code allega da sé: niente che riguardi
 l'articolo. La corsa rifà la sonda ogni volta e si ferma se compaiono strumenti, server MCP o parole sospette nella risposta.
 
+Claude Code non spegne il ragionamento nascosto del modello.
+`python3 -m rnd.sonda_token` rifà le 66 deduttive a cui Claude aveva risposto
+con la sola lettera e registra token e blocchi di ragionamento
+(`risultati/sonda-token.json`): 57 risposte da tre token, due cifrari con un
+blocco di ragionamento (54 e 72 token), sette volte il conto scritto. I gruppi
+sono in `risultati/sintesi.md`, «Deduttive secondo come ha risposto Claude».
+
 ## Corpora e conteggi
 
 - **ARC** (AI2 Reasoning Challenge, Clark et al. 2018): archivio originale di
@@ -86,7 +93,7 @@ l'articolo. La corsa rifà la sonda ogni volta e si ferma se compaiono strumenti
   Copertura: 99,5% delle Easy e 96,5% delle Challenge hanno almeno una volta
   la risposta giusta vicino a una parola della domanda. Il solutore di
   co-occorrenze rifà la divisione del 2018: **61%** sulle Easy, **22,5%**
-  sulle Challenge (sotto il caso: le Challenge sono proprio le domande che i
+  sulle Challenge (come il caso: le Challenge sono proprio le domande che i
   solutori di questo tipo sbagliavano).
 - **Wikipedia in italiano**: `wikimedia/wikipedia`, configurazione
   `20231101.it`, 10 file parquet (2,8 GB), licenza CC BY-SA 4.0.

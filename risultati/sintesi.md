@@ -164,3 +164,18 @@ accuratezza (n) per rispondente, variante e tipo
 | sonnet | intera | 100.0% (100) | 100.0% (20) | 100.0% (10) | 100.0% (10) | 100.0% (20) | 100.0% (20) | 100.0% (20) |
 | sonnet | solo_opzioni | 23.0% (100) | 65.0% (20) | 0.0% (10) | 30.0% (10) | 30.0% (20) | 0.0% (20) | 5.0% (20) |
 | sonnet | ragiona | 100.0% (100) | 100.0% (20) | 100.0% (10) | 100.0% (10) | 100.0% (20) | 100.0% (20) | 100.0% (20) |
+
+## Deduttive secondo come ha risposto Claude
+
+risposte giuste sulle stesse domande
+
+| Claude ha scritto | n | sonnet | qwen3.8-27b |
+|---|---|---|---|
+| solo la lettera | 61 | 61 | 59 |
+| solo la lettera, cifrari (ragionamento nascosto) | 5 | 5 | 2 |
+| il conto, poi la lettera | 34 | 34 | 18 |
+
+## Domande con sole opzioni numeriche (il solutore non legge le cifre)
+
+- numeriche: 14 ({'due_passi': 9, 'relazionale': 3, 'negazione': 2}), giuste 6
+- le altre: 186, giuste 100 (53.8%)

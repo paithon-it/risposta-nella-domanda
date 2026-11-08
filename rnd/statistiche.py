@@ -4,7 +4,8 @@ from __future__ import annotations
 
 import json
 import math
-from collections import defaultdict
+import re
+from collections import Counter, defaultdict
 from pathlib import Path
 
 from rnd.corsa import CARTELLA, Esito, carica_esiti
@@ -104,6 +105,49 @@ def _epistemologia(es: list[Esito]) -> dict:
     return ep
 
 
+_SOLA_LETTERA = re.compile(r"\s*[A-Da-d][).\s]*")
+
+
+def _regime_deduttive(primi: list[Esito], tipi: dict[str, str] | None = None,
+                      oracolo: str = "sonnet", vincolato: str = "qwen3.8-27b") -> dict:
+    """Le deduttive divise secondo come ha risposto l'oracolo: solo la lettera, o prima il conto.
+
+    Il modello vincolato ha sempre un solo passaggio: sulle stesse domande si vede
+    quanto del distacco sta dove l'oracolo ne ha fatti di più. I cifrari a sola
+    lettera stanno a parte, perché lì c'è un ragionamento nascosto (`rnd.sonda_token`).
+    """
+    def su(r: str) -> dict[str, Esito]:
+        return {e.id: e for e in primi if e.rispondente == r and e.famiglia == "deduttive" and e.variante == "intera"}
+    o, v = su(oracolo), su(vincolato)
+    if not o or not v:
+        return {}
+    gruppi: dict[str, list[str]] = {"sola_lettera": [], "sola_lettera_cifrari": [], "conto_scritto": []}
+    for i, e in o.items():
+        if e.testo is None or i not in v:
+            continue
+        if not _SOLA_LETTERA.fullmatch(e.testo):
+            gruppi["conto_scritto"].append(i)
+        else:
+            gruppi["sola_lettera_cifrari" if (tipi or {}).get(i, "").startswith("cifrario") else "sola_lettera"].append(i)
+    return {g: {"n": len(ids), oracolo: sum(bool(o[i].corretta) for i in ids), vincolato: sum(bool(v[i].corretta) for i in ids)}
+            for g, ids in gruppi.items()}
+
+
+def cifre_solutore(esiti: list[Esito], domande: list, stop: frozenset[str], rispondente: str = "pmi") -> dict:
+    """Le domande con sole opzioni numeriche: il solutore non legge le cifre, e lì tira a sorte."""
+    from rnd.cooccorrenze import parole
+
+    numeriche = [d for d in domande if not any(parole(o, stop) for o in d.opzioni)]
+    ids = {d.id for d in numeriche}
+    risposte = [e for e in esiti if e.rispondente == rispondente and e.famiglia == "fresche"
+                and e.variante == "intera" and e.ripetizione == 0]
+    dentro = [e for e in risposte if e.id in ids]
+    fuori = [e for e in risposte if e.id not in ids]
+    return {"numeriche": len(numeriche), "giuste_numeriche": sum(bool(e.corretta) for e in dentro),
+            "altre": len(fuori), "giuste_altre": sum(bool(e.corretta) for e in fuori),
+            "per_tipo": dict(Counter(d.tipo for d in numeriche))}
+
+
 def sintesi_da(esiti: list[Esito], copertura: dict[str, float], tipi: dict[str, str] | None = None) -> dict:
     per_risp = defaultdict(list)
     for e in esiti:
@@ -172,7 +216,7 @@ def sintesi_da(esiti: list[Esito], copertura: dict[str, float], tipi: dict[str, 
 
     return {"scala": scala, "due_per_due": due_per_due, "trappola": trappola, "epistemologia": epistemologia,
             "stabilita": stabilita, "copertura": copertura, "per_tipo": per_tipo, "posizione": posizione,
-            "deduttive": deduttive}
+            "deduttive": deduttive, "regime_deduttive": _regime_deduttive(primi, tipi)}
 
 
 def _copertura() -> dict[str, float]:
@@ -204,7 +248,11 @@ def sintesi(cartella: Path) -> dict:
     if deduttive.exists():  # il cifrario si divide per spostamento: 3 (frequente) e 2 (raro)
         tipi = (tipi or {}) | {d.id: f"cifrario-{d.tema.split('-')[1]}" if d.tipo == "cifrario" else d.tipo
                                for d in carica(deduttive) if d.tipo}
-    return sintesi_da(esiti, _copertura(), tipi)
+    s = sintesi_da(esiti, _copertura(), tipi)
+    if fresche.exists():
+        from rnd.cooccorrenze import carica_stop
+        s["cifre_solutore"] = cifre_solutore(esiti, carica(fresche), carica_stop("it"))
+    return s
 
 
 TIPI_DEDUTTIVE = ("aritmetica", "cifrario-3", "cifrario-2", "sillogismo", "controintuitivo", "ordinamento")
@@ -268,6 +316,18 @@ def scrivi_md(s: dict, p: Path) -> None:
         for v in sorted(vv, key=lambda v: ("intera", "solo_opzioni", "ragiona").index(v) if v in ("intera", "solo_opzioni", "ragiona") else 9):
             celle = [f"{_pct(vv[v][t]['accuratezza'])} ({vv[v][t]['n']})" if t in vv[v] else "–" for t in ("tutte",) + TIPI_DEDUTTIVE]
             r.append(f"| {rispondente} | {v} | " + " | ".join(celle) + " |")
+    regime = s.get("regime_deduttive")
+    if regime:
+        r += ["", "## Deduttive secondo come ha risposto Claude", "", "risposte giuste sulle stesse domande", "",
+              "| Claude ha scritto | n | sonnet | qwen3.8-27b |", "|---|---|---|---|"]
+        for g, nome in (("sola_lettera", "solo la lettera"), ("sola_lettera_cifrari", "solo la lettera, cifrari (ragionamento nascosto)"),
+                        ("conto_scritto", "il conto, poi la lettera")):
+            r.append(f"| {nome} | {regime[g]['n']} | {regime[g]['sonnet']} | {regime[g]['qwen3.8-27b']} |")
+    cifre = s.get("cifre_solutore")
+    if cifre:
+        r += ["", "## Domande con sole opzioni numeriche (il solutore non legge le cifre)", "",
+              f"- numeriche: {cifre['numeriche']} ({cifre['per_tipo']}), giuste {cifre['giuste_numeriche']}",
+              f"- le altre: {cifre['altre']}, giuste {cifre['giuste_altre']} ({_pct(cifre['giuste_altre'] / cifre['altre'])})"]
     p.write_text("\n".join(r) + "\n", encoding="utf-8")
 
 

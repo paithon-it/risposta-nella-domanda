@@ -2606,5 +2606,33 @@
     }
    }
   }
+ },
+ "regime_deduttive": {
+  "sola_lettera": {
+   "n": 61,
+   "sonnet": 61,
+   "qwen3.8-27b": 59
+  },
+  "sola_lettera_cifrari": {
+   "n": 5,
+   "sonnet": 5,
+   "qwen3.8-27b": 2
+  },
+  "conto_scritto": {
+   "n": 34,
+   "sonnet": 34,
+   "qwen3.8-27b": 18
+  }
+ },
+ "cifre_solutore": {
+  "numeriche": 14,
+  "giuste_numeriche": 6,
+  "altre": 186,
+  "giuste_altre": 100,
+  "per_tipo": {
+   "due_passi": 9,
+   "relazionale": 3,
+   "negazione": 2
+  }
  }
 }
