@@ -21,8 +21,10 @@ same fresh Italian questions; see `risultati/sintesi.md`.*
 
 ## Come citare
 
-paithon.it (2026). *La risposta è nella domanda?* Esperimento e dati.
-https://github.com/paithon-it/risposta-nella-domanda
+endjneer (2026). *La risposta è nella domanda?* Versione 1. Zenodo.
+https://doi.org/10.5281/zenodo.24057004
+
+Codice e dati: https://github.com/paithon-it/risposta-nella-domanda
 
 ## Test
 
